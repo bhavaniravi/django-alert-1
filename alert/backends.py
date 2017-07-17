@@ -57,7 +57,7 @@ class EmailBackend(BaseAlertBackend):
                 
             else:
                 send_mail(subject, alert.body, from_email, to)
-        except Exception, e:
+        except Exception as e:
             print "sending to", recipient, "failed"
             print e
             print "\n"
